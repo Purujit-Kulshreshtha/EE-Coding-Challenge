@@ -1,0 +1,17 @@
+{
+  "name": "ee-delivery-management",
+  "version": "1.0.0",
+  "description": "Command-line application to manage deliveries (cost and scheduling) for Kiki's Service",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "nodemon index.js"
+  },
+  "author": "Purujit Kulshreshtha",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.2.0",
+    "nodemon": "^2.0.12"
+  }
+}

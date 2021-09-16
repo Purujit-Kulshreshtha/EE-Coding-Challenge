@@ -1,0 +1,28 @@
+---------Initial Setup------- 
+initialize Git		-done
+initialize npm package		-done
+set up runtime environment
+		install nodemon		-done
+		add/modify start script		-done
+		add package type		-done
+set up testing environment
+		install dependencies (jest)		-done
+		set up test.js file		-done
+		make testData file		-done
+		add 2-3 test cases to be used throughout development		-DONE
+
+---------Problem 1.1---------
+setup
+		set up folder and file structure
+		import in index.js
+		include in test script
+solve actual problem
+ensure all test cases and edge cases work
+
+---------Problem 1.2---------
+setup
+		set up folder and file structure
+		import in index.js
+		include in test script
+solve actual problem
+ensure all test cases and edge cases work
