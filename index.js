@@ -1,8 +1,7 @@
 const findDeliveryCost = require('./deliveryCost')
 
-const main = (a) => {
-	
-	return findDeliveryCost(a)
+const main = (input) => {
+	return findDeliveryCost(input)
 }
 
 module.exports = main;
