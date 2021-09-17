@@ -26,3 +26,9 @@ setup
 		include in test script
 solve actual problem
 ensure all test cases and edge cases work
+
+
+
+
+---------Extras--------------
+	``Moved offerTable (table containing criteria of offer) from delivery cost function to entry point of dilevery cost calculater in order to avoid initializing the variable containing all the data again and again, every time the function is called and improve space complexity.
