@@ -1,4 +1,4 @@
-const testData = [
+const costTestData = [
 
 	//test data structre
 	// input (object): 
@@ -32,8 +32,8 @@ const testData = [
 		packages: ["PKG1 101 51 OFR002", "PKG2 249 149 OFR002", "PKG3 71 1 OFR001", "PKG4 199 199 OFR001", "PKG5 11 51 OFR003", "PKG6 149 249 OFR003", "PKG7 -5 5 OFR002", "PKG8 5 -5 OFR003", "PKG9 5 5 OFR004"]
 		},
 		
-	expectedOutput: ["PKG1 90.02 1195.98", "PKG2 227.92 3028.08", "PKG3 73.6 662.4", "PKG4 300.6 2705.4", "PKG5 19.3 366.7", "PKG6 137.8 2618.2", "Invalid input.", "Invalid input.", "Invalid input."]
+	expectedOutput: ["PKG1 90.02 1195.98", "PKG2 227.92 3028.08", "PKG3 73.6 662.4", "PKG4 300.6 2705.4", "PKG5 19.3 366.7", "PKG6 137.8 2618.2", "Invalid input.", "Invalid input.", "PKG9 0 96"]
 	}
 ]
 
-module.exports = testData
+module.exports = costTestData

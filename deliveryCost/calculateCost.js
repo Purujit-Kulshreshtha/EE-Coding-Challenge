@@ -8,12 +8,17 @@ const calculateCost = (pkg, basePrice, offerTable) => {
 	const offerCodeData = offerTable[pkgOffer]
 
 	//dealing with invalid input
-	if (pkgWeight < 1 || pkgDistance < 1 || !offerCodeData){
+	if (pkgWeight < 1 || pkgDistance < 1){
 		return "Invalid input."
 	}
 
 	//checking if offer code is applicable
-	const isApplicable = (pkgDistance >= offerCodeData.distanceLow && pkgDistance <= offerCodeData.distanceHigh) && (pkgWeight >= offerCodeData.weightLow && pkgWeight <= offerCodeData.weightHigh)
+	let isApplicable;
+	if (offerCodeData){
+		 isApplicable = (pkgDistance >= offerCodeData.distanceLow && pkgDistance <= offerCodeData.distanceHigh) && (pkgWeight >= offerCodeData.weightLow && pkgWeight <= offerCodeData.weightHigh)
+	} else {
+		isApplicable = false
+	}
 
 	//calculating discount and final cost
 	const deliveryCost = basePrice + (pkgWeight * 10) + (pkgDistance * 5)
