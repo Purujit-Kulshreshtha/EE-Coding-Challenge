@@ -1,5 +1,5 @@
 const main = require("./index.js")
-const testData = require('./testData.js')
+const testData = require('./testing/testData.js')
 
 test("Returns all delivery detauks.", () => {
 	testData.map((testCase) => {

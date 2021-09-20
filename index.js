@@ -24,7 +24,7 @@ const main = (input) => {
 			finalOutput.push(finalPackageDetails)
 		}
 	})
-
+	
 	return finalOutput
 
 }

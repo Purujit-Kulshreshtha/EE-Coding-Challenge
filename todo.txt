@@ -30,7 +30,6 @@ ensure all test cases and edge cases work		-done
 ---------Combine Solutions and Test Cases
 Combine input and output in main (index.js)		-done
 Run combine tests with appropriate data in main (index.test.js)		-done
-Add individual test functionality to each solution for unit-testing
 
 ---------Command Line UI-----
 

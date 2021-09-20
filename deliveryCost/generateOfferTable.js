@@ -4,7 +4,6 @@ const generateOfferTable = () => {
 
 	const data = (fs.readFileSync("./deliveryCost/criteria.txt")).toString()
 	const lines = (data.split("\n")).splice(2, data.length)
-	'OFR001 10 0-200 70-200'
 	const offerTable = {}
 	lines.forEach((line) => {
 		const values = line.split(" ")
