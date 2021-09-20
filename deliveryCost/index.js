@@ -6,7 +6,7 @@ const fs = require('fs')
 
 const findDeliveryCosts = (input) => {
 
-	const offerTable = generateOfferTable()
+	const offerTable = generateOfferTable()//generates offer table based on the critera in 'criteria.txt'. Allows to easily add, remove or change offer criteria.
 
 	const costs = [] //output array
 

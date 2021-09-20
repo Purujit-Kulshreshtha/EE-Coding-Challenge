@@ -1,3 +1,4 @@
+//custom sorting function to be used with JS array,sort()
 const sortpkgsByWeight = (a, b) => {
 	if (a.weight > b.weight){
 		return -1
