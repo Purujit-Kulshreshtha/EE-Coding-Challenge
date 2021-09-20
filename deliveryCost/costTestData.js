@@ -2,7 +2,7 @@ const costTestData = [
 
 	//test data structre
 	// input (object): 
-	// 	standards (string): base delivery cost and number of packages
+	// 	standards (string): base delivery cost, number of packages, number of vehicles, speed of vehicles and capcity of vehicles
 	// 	packages (array of strings): details of packages (id, weight, distance, offercode)
 
 	// expectedOutput (array of strings): expectedOutput
