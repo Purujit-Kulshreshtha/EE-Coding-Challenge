@@ -24,14 +24,23 @@ const scheduleShipments = (packageObjects, shipmentBatches, numberOfVehicles) =>
 		packages.forEach(id => {
 			let index = packageObjects.findIndex(item => item.id === id) 
 
-			let currentPackageTime = (packageObjects[index].timeTaken + minReturnTime) //delivery time of current package, including vehicle return time
+			//dealing with invalid input
+			let currentPackageWeight = packageObjects[index].weight
+			let currentPackageDistance = packageObjects[index].distance
 
-			currentPackageTime = parseFloat(currentPackageTime.toFixed(2)) //to get only two decimal places
+			if (currentPackageWeight < 1 || currentPackageDistance < 1){
+				schedule.push(`${id} Invalid input.`)
+			} else {
+				let currentPackageTime = (packageObjects[index].timeTaken + minReturnTime) //delivery time of current package, including vehicle return time
 
-			currentShipmentTimes.push(currentPackageTime) //to be used to calculate limiting factor of vehicle return time for each shipment
+				currentPackageTime = parseFloat(currentPackageTime.toFixed(2)) //to get only two decimal places
 
-			const deliveryTimeData = `${id} ${currentPackageTime}`
-			schedule.push(deliveryTimeData)
+				currentShipmentTimes.push(currentPackageTime) //to be used to calculate limiting factor of vehicle return time for each shipment
+
+				const deliveryTimeData = `${id} ${currentPackageTime}`
+				schedule.push(deliveryTimeData)
+
+			}
 		})
 
 		//adding all vehicle return times to returnTimes array

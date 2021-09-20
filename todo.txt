@@ -11,24 +11,31 @@ set up testing environment
 		make testData file		-done
 		add 2-3 test cases to be used throughout development		-dibe 
 
----------Problem 1.1---------
+---------Problem 1.1---------						-COMPLETED
+setup
+		set up folder and file structure		-done
+		import in index.jest		-done
+		include in test script		-done	
+solve actual problem		-done
+ensure all test cases and edge cases work		-done
+
+---------Problem 1.2---------						-COMPLETED
 setup
 		set up folder and file structure		-done
 		import in index.jest		-done
 		include in test script		-done
-solve actual problem
-ensure all test cases and edge cases work
+solve actual problem		-done
+ensure all test cases and edge cases work		-done
 
----------Problem 1.2---------
-setup
-		set up folder and file structure
-		import in index.js
-		include in test script
-solve actual problem
-ensure all test cases and edge cases work
+---------Combine Solutions and Test Cases
+Combine input and output in main (index.js)		-done
+Run combine tests with appropriate data in main (index.test.js)		-done
+Add individual test functionality to each solution for unit-testing
+
+---------Command Line UI-----
 
 
 
 
 ---------Extras--------------
-	``Moved offerTable (table containing criteria of offer) from delivery cost function to entry point of dilevery cost calculater in order to avoid initializing the variable containing all the data again and again, every time the function is called and improve space complexity.
+``Moved offerTable (table containing criteria of offer) from delivery cost function to entry point of dilevery cost calculater in order to avoid initializing the variable containing all the data again and again, every time the function is called and improve space complexity.

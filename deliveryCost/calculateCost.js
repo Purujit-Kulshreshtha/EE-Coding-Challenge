@@ -30,7 +30,9 @@ const calculateCost = (pkg, basePrice, offerTable) => {
 		totalCost = deliveryCost - discount
 	}
 
-	return `${pkgId} ${discount} ${totalCost}`
+	let packageCostObject = {id: pkgId, discount: discount, totalCost: totalCost}
+
+	return packageCostObject
 
 }
 

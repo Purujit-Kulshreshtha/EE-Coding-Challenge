@@ -8,7 +8,7 @@ const arrangeSchedule = require("./arrangeSchedule.js")
 const findDeliveryTimes = (input) => {
 
 	//declaring values by parsing input
-	const standards = (input.standards).split(" ")
+	const standards = input.standards.split(" ")
 	const numberOfPkgs = standards[1]
 	const numberOfVehicles = parseInt(standards[2])
 	const speed = standards[3]
@@ -39,7 +39,6 @@ const findDeliveryTimes = (input) => {
 
 	//sorting schedule by package Id to match input
 	schedule.sort(arrangeSchedule)
-	console.log(schedule)
 
 	return schedule
 }
