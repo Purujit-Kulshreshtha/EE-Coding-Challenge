@@ -40,4 +40,4 @@ const addTestData = () => {
 }
 addTestData()
 
-module.exports = testDat
+module.exports = testDat;
