@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "Purujit Kulshreshtha",
   "license": "ISC",
   "dependencies": {
-    "jest": "^27.2.0",
-    "nodemon": "^2.0.12"
+    "inquirer": "^8.1.5",
+    "jest": "^27.2.0"
   }
 }

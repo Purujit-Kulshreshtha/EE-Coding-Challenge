@@ -1,4 +1,4 @@
-const main = require("./index.js")
+const main = require("./main.js")
 const testData = require('./testing/testData.js')
 
 test("Returns all delivery detauks.", () => {

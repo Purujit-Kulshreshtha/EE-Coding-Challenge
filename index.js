@@ -1,32 +1,53 @@
-const findDeliveryCosts = require('./deliveryCost')
-const findDeliveryTimes = require('./deliveryTime')
+const main = require("./main.js")
+const readline = require('readline');
 
-const main = (input) => {
+const rl = readline.createInterface({
+	input: process.stdin,
+	output: process.stdout
+});
 
-	const deliveryCosts = findDeliveryCosts(input)
-	const deliveryTimes = findDeliveryTimes(input) 
+let inputValues = {};
+let baseDeliveryCost;
+let numberOfPackages;
+let numberOfVehicles;
+let speed;
+let maxCapacity;
+let output;
+rl.question("Enter detials (fromat: 'base-cost number-of-packages number-of-vehivles speed max-capacity): ", (userInput) => {
+	const values = userInput.split(" ")
+	numberOfPackages = values[1]
 
-	let finalOutput = [];
+	let standards = userInput
+	let packagesRequried = parseInt(numberOfPackages)
+	let packages = [];
+	
+	rl.setPrompt("Please enter package details (format: 'id weight distance offer-code'): ")
+	rl.prompt()
+	rl.on('line', (packageDetails) => {
+		let detailsArray = packageDetails.split(" ")
 
-	deliveryTimes.forEach(pkg => {
-		let timeDetails = pkg.split(" ")
-		packageId = timeDetails[0]
-		packageTime = timeDetails[1]
-
-		let indexOfPackageInCosts = deliveryCosts.findIndex(item => item.id === packageId)
-		let costDetails = deliveryCosts[indexOfPackageInCosts]
-
-		if (!costDetails){
-			finalOutput.push("Invalid input.")
-		} else{
-			let finalPackageDetails = `${packageId} ${costDetails.discount} ${costDetails.totalCost} ${packageTime}`
-
-			finalOutput.push(finalPackageDetails)
+		if (packagesRequried === 1){
+			inputValues = {standards, packages}
+			output = main(inputValues)
+			rl.close()
+		} else if (detailsArray.length < 4){
+			rl.setPrompt("INVALID INPUT, PLEASE TRY AGAIN: ")
+			rl.prompt()
+		} else {
+			packages.push(packageDetails)
+			packagesRequried--
+			rl.setPrompt("Please enter next package details (format: 'id weight distance offer-code'): ")
+			rl.prompt()
 		}
 	})
 	
-	return finalOutput
+})
 
-}
 
-module.exports = main;
+rl.on('close', () => {
+	if (output){
+		console.log(output)
+	} else {
+		console.log("Application terminated by user.")
+	}
+})
