@@ -31,7 +31,7 @@ ensure all test cases and edge cases work		-done
 Combine input and output in main (index.js)		-done
 Run combine tests with appropriate data in main (index.test.js)		-done
 
----------Command Line UI-----
+---------Command Line UI-----		-COMPLETED
 
 
 

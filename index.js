@@ -1,11 +1,13 @@
 const main = require("./main.js")
 const readline = require('readline');
 
+//readline module for command line interface
 const rl = readline.createInterface({
 	input: process.stdin,
 	output: process.stdout
 });
 
+//declaring input values
 let inputValues = {};
 let baseDeliveryCost;
 let numberOfPackages;
@@ -13,6 +15,8 @@ let numberOfVehicles;
 let speed;
 let maxCapacity;
 let output;
+
+//taking input
 rl.question("Enter detials (fromat: 'base-cost number-of-packages number-of-vehivles speed max-capacity): ", (userInput) => {
 	const values = userInput.split(" ")
 	numberOfPackages = values[1]
@@ -21,6 +25,7 @@ rl.question("Enter detials (fromat: 'base-cost number-of-packages number-of-vehi
 	let packagesRequried = parseInt(numberOfPackages)
 	let packages = [];
 	
+	//repeatedly asking for package details until number of packages are met
 	rl.setPrompt("Please enter package details (format: 'id weight distance offer-code'): ")
 	rl.prompt()
 	rl.on('line', (packageDetails) => {
@@ -43,7 +48,7 @@ rl.question("Enter detials (fromat: 'base-cost number-of-packages number-of-vehi
 	
 })
 
-
+//final output
 rl.on('close', () => {
 	if (output){
 		console.log(output)
