@@ -10,7 +10,6 @@
   "author": "Purujit Kulshreshtha",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^8.1.5",
     "jest": "^27.2.0"
   }
 }
